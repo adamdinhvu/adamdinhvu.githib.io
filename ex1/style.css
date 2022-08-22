@@ -1,0 +1,149 @@
+:root {
+    --bg: #633f47;
+    --main: #fae8ec;
+    --border: 2px;
+    
+}
+
+/* Colour pallette kept incredibly minimal to keep information easily accepssiible */
+
+body {
+    display: grid;
+    grid-template-rows: auto 30vh auto auto auto;
+    grid-template-columns: .5fr 5fr .5fr;
+    grid-template-areas: 
+        ". header ."
+        ". . ."
+        ". info-text ."
+        ". subgrid ."
+        ". footer .";
+
+    background-color: var(--bg);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    grid-area: header;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width:100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.info-text {
+    grid-area: info-text;
+    text-align: center;
+    color: var(--main);
+
+    font-size: 18px;
+}
+
+
+/* This is where we do the subgrid, so the table that holds all the information */
+/* Using fr to keep design responsive */
+
+
+.subgrid {
+    grid-area: subgrid;
+    gap: .5em;
+    
+    color: var(--main);
+    
+
+    display: grid;
+    grid-template-columns: 9fr 3fr 3fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+/* define things that apply to every elemet in subgrid */
+
+.subgrid div {
+    outline: 1px solid 
+}
+
+.subgrid p {
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+    font-size: 1.5vw;
+    word-break: break-word;
+}
+
+/* each is a different type of box with differnet stylings */
+
+.sub-title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    word-break: break-all;
+
+    font-size: 1.7vw;
+
+    text-align: center;
+}
+
+.artist-title{
+    grid-column: 2 / 4;
+
+    text-indent: 10px;
+
+    font-size: 1.5vw;
+
+}
+
+.branding{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.set-type {
+    grid-column: 4 / 5;
+}
+
+.support {
+    grid-column: 2 / 6;
+
+    text-align: center;
+    font-size: 1vw;
+}
+
+.space {
+    grid-column: 4/6;
+}
+
+/* Footer section is a flexbox not part of the grid, for scaling reasons */
+
+footer {
+    grid-area: footer;
+    
+    display: flex;
+    justify-content: center;
+    
+    gap: 12px;
+    
+    color: var(--main);
+}
+
+footer h1{
+    flex-grow: 1;
+    text-align: center;
+    height: auto;
+    font-size: 60px;
+
+    
+    
+    outline: var(--border) solid var(--main);
+}
+
+/* extra class added to boxes to optionally give them a rounded rectangle outline */
+
+.rounded {
+    border-radius: 6px;
+}
