@@ -1,0 +1,170 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+
+  --col-01:#2f2932;
+  --col-02:#e4e1db;
+  --col-03:#8888d6;
+  /* Didn't change the link colour because I thought it looked good on both, although you could argue the contrast is too low in light mode */
+  /* I think if the body text was this colour it would be too low contrast */
+  --col-04:#a645af;
+
+  --invert: 0%;
+
+
+  font-size: 16px;
+}
+
+#modeButton {
+  display: flex;
+  float: right;
+  margin: auto;
+  
+  border-color: var(--col-01);
+  
+  background-color: var(--col-02);
+}
+
+#modeButton:hover{
+  background-color: var(--col-01);
+  transition: background-color .1s;
+}
+
+.button-image {
+  max-width: 5vh; 
+
+  filter: invert(var(--invert)); 
+  /* Because I'm using invert to change the image colour, not a seperate PNG, the colours don't quite match the background. I don't think this matters, and I think have two seperate images is more annoying */
+
+  transition: filter .1s;
+  
+}
+
+.button-image:hover{
+  filter: invert(calc(100% - var(--invert))); 
+  transition: filter .1s;
+
+  /* I'm inverting the image when the user hovers over the button because I want to show them what will happen when they press the button */
+}
+
+hr {
+  color: var(--col-01)
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+
+  transition: background-color .1s;
+  /* Animation is kept subtle and reposnsive, I don't want it be distracting, just a little bit of additional feedback */
+
+}
+
+a {
+  color: var(--col-03);
+  transition: color .1s;
+
+  /* Included a transition here for a bit of extra feedback, it helps differnetiating what park of a link is being highlighted when it is just one word. */
+}
+
+a:hover{
+  color: var(--col-04);
+
+  transition: color 0.1s;
+  
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+  font-family: 'Vollkorn', serif;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 2rem;
+  
+  font-family: 'Vollkorn', serif;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+
+}
