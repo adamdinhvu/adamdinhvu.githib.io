@@ -1,0 +1,229 @@
+:root {
+  
+}
+
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('fonts/heydings_controls-webfont.eot');
+    src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/heydings_controls-webfont.woff') format('woff'),
+         url('fonts/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-image: url("graphics/bg.jpg");
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+}
+
+footer {
+  bottom: 0%;
+  position: fixed;
+}
+
+summary {
+  font-weight: bold;
+  font-variant: small-caps;
+  cursor: pointer;
+  list-style: none;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 90;  
+  
+  width: 60%;
+
+
+  mix-blend-mode: exclusion;
+}
+
+.dancers {
+  position: fixed;
+  z-index: 100;
+
+  mix-blend-mode: difference;
+}
+
+.dancer {
+  
+  animation: dancing 10s infinite alternate linear;
+  animation-play-state: running;
+
+  pointer-events: none
+}
+
+.loading {
+  position: fixed;
+  z-index: 100;
+
+  width: 40vw;
+
+  visibility: hidden;
+
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@keyframes dancing {
+  0% {transform: translateX(0vw)}
+  100% {transform: translateX(93vw)}
+}
+
+
+video {
+  border: 1px solid black;
+  border-radius: 10vw;
+  width: 80%;
+}
+
+p {
+  position: absolute;
+  top: 310px;
+}
+
+.player {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+
+}
+
+.video-controls {
+  visibility: hidden;
+  opacity: 0.5;
+  width: 400px;
+
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: black;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+  display: flex;
+}
+
+.audio-controls {
+  visibility: hidden;
+  opacity: 1;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: black;
+  box-shadow: 3px 3px 5px black;
+  transition: 1s all;
+  display: flex;
+}
+
+button, .controls {
+  background: linear-gradient(to bottom,#222,#666);
+}
+
+.player:hover .controls, player:focus .controls {
+  opacity: 1;
+}
+
+button:before {
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: #aaa;
+  text-shadow: 1px 1px 0px black;
+}
+
+.play:before {
+  font-size: 22px;
+}
+
+
+button, .timer {
+  height: 38px;
+  line-height: 19px;
+  box-shadow: inset 0 -5px 25px rgba(0,0,0,0.3);
+  border-right: 1px solid #333;
+}
+
+button {
+  position: relative;
+  border: 0;
+  flex: 1;
+  outline: none;
+  
+}
+
+
+
+.volume:hover + .volume-slider {
+
+  visibility: visible;
+  width: 100px;
+
+  transition:width  0.2s linear;
+}
+
+.volume-slider {
+  visibility: hidden;
+  width: 0;
+
+  transition: width 0.2s linear;
+}
+
+.volume-slider:hover {
+  visibility: visible;
+  width: 100px;
+}
+
+.scrubber {
+  flex-shrink: 2;
+}
+
+
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px black;
+  color: white;
+  flex: 1;
+  
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  background-color: rgba(255,255,255,0.2);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
+}
+
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 10px;
+}
+
+button:hover,button:focus {
+  box-shadow: inset 1px 1px 2px black;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 2px black;
+}
+
+.active:before {
+  color: red;
+}
