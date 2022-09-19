@@ -6,6 +6,8 @@
 
     I removed the weird VCR controls that were here before and added a modern scrubber, it made nost of the old control redundant so i removed them
     I chose a volume slider because most modern media players have that
+    
+    I hid the volume slider behind a hover because its less important than the scrubber
 */
 
 
