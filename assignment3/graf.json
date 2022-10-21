@@ -2,11 +2,11 @@
     {
         "text":         "faufa!",
         "color":        "red",
-        "font":         "Times New Roman",
+        "font":         "Times",
         "size":         "3rem",
-        "left":         "60%",
+        "left":         "2%",
         "top":          "60%",
-        "rotation":     "90deg"
+        "rotation":     "2.5"
     },
     {
         "text":         "nerd!!!",
@@ -15,15 +15,15 @@
         "size":         "3rem",
         "left":         "60%",
         "top":          "80%",
-        "rotation":     "5deg"
+        "rotation":     "1"
     },
     {
         "text":         "nice test test",
         "color":        "magenta",
-        "font":         "Georgia",
+        "font":         "Comic",
         "size":         "2rem",
         "left":         "50%",
         "top":          "50%",
-        "rotation":     "0deg"
+        "rotation":     "0"
     }
 ]

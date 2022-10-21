@@ -1,25 +1,80 @@
+/* 
+    Styling is very silly and playful overall
+    designed to replicate that early internet, little graphic design experience
+    i thought it fit well with the slightly ridicolous metaphor
+*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Comic Sans MS, Comic Sans, Chalkboard SE, cursive;
+    background-color: #10472a;
 }
 
+h1 {
+    color: aqua;
+    transform: rotate(2deg);
+}
+
+
 .input-wrapper {
+    display: grid;
+    gap: 1%;
+    width: 100%;
+    grid-template-columns: 1fr 5fr 1fr;
     z-index: 102;
-    height: 20vh;
-    text-align: center;
 }
 
 .text-input {
-    width: 50vw;
-
-    height: 100%;
-    overflow-y: hidden;
+    height: 90%;
+    width: 100%;
     resize: none;
+    background-color: #28704b;
+    border: none;
+}
+
+.color-input {
+    border: none;
+    background-color: #28704b;
+}
+
+.size-input {
+    background: #28704b;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: .35em;
+    background: #28704b;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-track {
+    height: .35em;
+    background:#28704b;
+    border: none;
+    border-radius: 3px;
+}
+
+
+
+
+.place-button {
+    width: 100%;
+    height: 90%;
+    border: none;
+    background-color: #28704b;
+    color: #25e004;
+    font-size: x-large;
+    font-family: Comic Sans MS, Comic Sans, Chalkboard SE, cursive;
+}
+
+.changer-wrapper {
+
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .graf {
     position: absolute;
-
-    
 }
 
 .unselectable {
@@ -32,7 +87,9 @@ body {
                                     supported by Chrome, Opera and Firefox */
 }
 
-
+/* 
+    using a dashed border, trying to replciate the style of a photoshop boundry
+*/
 .draggable {
     position: absolute;
     cursor: move;
@@ -43,6 +100,10 @@ body {
 h2 {
     text-align: center;
 }
+
+/*
+just using the cursor: grab to indicate this is interactable (rotation) i think its enough to get the point across
+*/
 
 .unset-graf {
     word-wrap: break-word;

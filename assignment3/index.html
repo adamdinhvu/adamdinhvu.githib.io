@@ -11,21 +11,25 @@
     <body>
         
         <div class="input-wrapper">
-            <label>
-                <textarea class="text-input" rows="3" maxlength="280"></textarea>
-                <button onclick="createGraf()">Place</button>
-            </label>
+            <div>
+                <h1>
+                    Welcome to the toilet!
+                </h1>
+            </div>
+            <div>
+                <textarea class="text-input" aria-label="graffiti input area" rows="3" maxlength="280"></textarea>
+            </div>
+            <div>
+                <button class="place-button" aria-label="placement button" onclick="createGraf()">Place</button>
+            </div>
+        </div>
 
-            <hr>
+        <hr>
 
-            <input type="color" class="color-input" value="#000000">
-            <input type="range" class="size-input" min="0" max="1" step="0.05">
-            
-            
-            <select class="font-select">
-
-            </select>
-            
+        <div class="changer-wrapper">
+            <input type="color" class="color-input" aria-label="color changer" value="#000000">
+            <input type="range" class="size-input" aria-label="size changer" min="0" max="1" step="0.05">
+            <select class="font-select" aria-label="font selector"></select>
         </div>
  
         <template>
@@ -34,16 +38,13 @@
                     <p class="unset-graf">adyvaja</p>
     
                     <h2>
-                        <button class="confirm-button">tag!</button>
+                        <button class="confirm-button" onclick="confirmGraf()">tag!</button>
                         <button class="confirm-button" onclick="trashGraf()">trash!</button>
                     </h2>
                 </div>
             </div>
         </template>
-        
-        
 
-        
 
         <script src="script.js"></script>
     </body>
