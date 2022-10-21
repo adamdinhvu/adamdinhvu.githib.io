@@ -1,0 +1,29 @@
+[
+    {
+        "text":         "faufa!",
+        "color":        "red",
+        "font":         "Times New Roman",
+        "size":         "3rem",
+        "left":         "60%",
+        "top":          "60%",
+        "rotation":     "90deg"
+    },
+    {
+        "text":         "nerd!!!",
+        "color":        "purple",
+        "font":         "Arial",
+        "size":         "3rem",
+        "left":         "60%",
+        "top":          "80%",
+        "rotation":     "5deg"
+    },
+    {
+        "text":         "nice test test",
+        "color":        "magenta",
+        "font":         "Georgia",
+        "size":         "2rem",
+        "left":         "50%",
+        "top":          "50%",
+        "rotation":     "0deg"
+    }
+]
